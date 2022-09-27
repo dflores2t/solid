@@ -1,0 +1,21 @@
+namespace DosOpenRefactory;
+
+public abstract class CBaseInventario
+{
+  protected CProducto producto;
+
+  public CProducto Producto { get => producto; set => producto = value; }
+  //public CProducto Producto { get; set; }//aca da error solo ejecuta un produto
+
+  //constructor.
+  public CBaseInventario(CProducto pProducto)
+  {
+    producto = pProducto;
+  }
+
+  public override string ToString()
+  {
+    return producto.ToString();
+  }
+  public abstract double CalcularProducto();
+}
